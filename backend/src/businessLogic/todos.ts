@@ -64,13 +64,14 @@ export async function createAttachmentPresignedUrl(
   todoId: string,
   userId: string
 ): Promise<string> {
-  logger.info('Generating pre-signed upload url: for: ', userId, todoId)
+  logger.info('Create attachment function called by user', userId, todoId)
 
-  const url = attachmentUtils.getUploadUrl(todoId)
+  // const url = attachmentUtils.getUploadUrl(todoId)
 
-  logger.info(
-    `url generated: url starts here =========== ${url} ========= url ends here`
-  )
+  // logger.info(
+  //   `url generated: url starts here =========== ${url} ========= url ends here`
+  // )
 
-  return url as string
+  // return url as string
+  return attachmentUtils.getUploadUrl(todoId)
 }

@@ -15,7 +15,9 @@ export const handler = middy(
     console.log('generate presigned url called.')
     const userId = getUserId(event)
 
-    const uploadUrl = await createAttachmentPresignedUrl(todoId, userId)
+    const uploadUrl = await createAttachmentPresignedUrl(
+      todoId,
+       userId)
 
     return { statusCode: 201, body: JSON.stringify({ uploadUrl: uploadUrl }) }
   }
