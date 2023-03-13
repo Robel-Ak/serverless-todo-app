@@ -61,12 +61,12 @@ custom:
         schema: ${file(models/update-todo-model.json)}
 
 functions:
-  hello:
-    handler: handler.hello
-    events:
-      - httpApi:
-          path: /
-          method: get
+  # hello:
+  #   handler: handler.hello
+  #   events:
+  #     - httpApi:
+  #         path: /
+  #         method: get
 
   Auth:
     handler: src/lambda/auth/auth0Authorizer.handler
